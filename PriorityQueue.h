@@ -13,14 +13,8 @@ public:
 	}
 	~PriorityQueue() {}
 
-	//return the first Node
-	void front()
-	{
-		return m_elements.Front();
-	}
-
 	// Priority Queue Functions
-	void push(T val)
+	void push(int p, T val)
 	{
 		assert(m_elements.GetSize() < m_size);
 
@@ -33,23 +27,32 @@ public:
 			LinkIterator<T> it;
 			it = m_elements.Front();
 
-			CMP cmp;	// Placeholder for the comparisons
+			//CMP cmp;	// Placeholder for the comparisons
+
+			//while (it.isValid())
+			//{
+			//	if (cmp(val, *it))
+			//	{
+			//		break;	// Move the iterator to the place where we want to insert the new node into
+			//	}
+
+			//	it++;
+			//}
 
 			while (it.isValid())
 			{
-				if (cmp(val, *it))
+				if (it.GetPriority <= p)
 				{
-					break;	// Move the iterator to the place where we want to insert the new node into
+					m_elements.Insert_Before(it, val);
+					break;
 				}
-
+				else
+				{
+					m_elements.Insert_After(it, val);
+				}
 				it++;
 			}
-
-			if (it.isValid())
-			{
-				m_elements.Insert_Before(it, val);
-			}
-			else
+			if (!it.isValid())
 			{
 				m_elements.Push_Back(val);
 			}

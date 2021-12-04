@@ -1,24 +1,2 @@
 ﻿  PriorityQueueTest.cpp
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueue.h(65,1): error C2556: 'T &PriorityQueue<T,less_cmp<T>>::front(void)': overloaded function differs only by return type from 'void PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>::front(void)'
-          with
-          [
-              T=NetworkMessage
-          ]
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueue.h(17): message : see declaration of 'PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>::front'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueueTest.cpp(90): message : see reference to class template instantiation 'PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>' being compiled
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueue.h(64,5): error C2040: 'PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>::front': 'T &(void)' differs in levels of indirection from 'void (void)'
-          with
-          [
-              T=NetworkMessage
-          ]
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueue.h(67,6): error C2059: syntax error: '='
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueue.h(67,1): error C2238: unexpected token(s) preceding ';'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueue.h(69,3): error C2059: syntax error: 'return'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueue.h(69,1): error C2238: unexpected token(s) preceding ';'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueue.h(71,2): error C2146: syntax error: missing ';' before identifier 'T'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueueTest.cpp(98,51): error C2039: 'GetSize': is not a member of 'PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueueTest.cpp(90): message : see declaration of 'PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueueTest.cpp(100,13): error C2039: 'isEmpty': is not a member of 'PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueueTest.cpp(90): message : see declaration of 'PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueueTest.cpp(111,10): error C2039: 'isEmpty': is not a member of 'PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>'
-C:\Users\nguye\source\repos\Game2001_A2_NguyenDung\PriorityQueueTest.cpp(90): message : see declaration of 'PriorityQueue<NetworkMessage,less_cmp<NetworkMessage>>'
+  Game2001_A2_NguyenDung.vcxproj -> C:\Users\nguye\source\repos\GAME2001\Game2001_A2_NguyenDung\Debug\Game2001_A2_NguyenDung.exe

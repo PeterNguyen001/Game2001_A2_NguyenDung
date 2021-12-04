@@ -15,6 +15,7 @@ public:
 	friend class LinkedList<T>;
 private:
 	T m_data;
+	int m_priority;
 	LinkNode* m_next;	// Self-referencial Pointer
 	LinkNode* m_previous;
 };
@@ -65,6 +66,14 @@ public:
 	{
 		assert(m_node != nullptr);
 		m_node = m_node->m_previous;
+	}
+	int GetPriority()
+	{
+		return m_node->m_priority;
+	}
+	void SetPriority(int p)
+	{
+		m_node->m_priority = p;
 	}
 	// Comparison Operator (!= & ==) <-- Check whether the node we are pointing too is equal to a node we pass in
 	bool operator!=(LinkNode<T>* node)
@@ -142,7 +151,7 @@ public:
 		m_size++;
 	}
 	 
-	void Insert_After(LinkIterator<T>& it, T newData)
+	void Insert_After(int p, LinkIterator<T>& it, T newData)
 	{
 		assert(it.m_node != nullptr);
 
@@ -150,6 +159,7 @@ public:
 		assert(node != nullptr);
 
 		node->m_data = newData;
+		node->m_priority = p ;
 		node->m_next = it.m_node->m_next;
 		node->m_previous = it.m_node;
 
@@ -170,13 +180,14 @@ public:
 	}
 	
 	// --------------- LINKED LIST OPERATIONS ---------------------
-	void Push_Front(T newData)
+	void Push_Front(int p, T newData)
 	{
 		// Create a new node (new root node)
 		LinkNode<T>* node = new LinkNode<T>;
 
 		assert(node != nullptr);
 		node->m_data = newData;
+		node->m_priority = p;
 		node->m_next = nullptr;
 		node->m_previous = nullptr;
 
