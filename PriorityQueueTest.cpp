@@ -2,11 +2,9 @@
 #include "PriorityQueue.h"
 using namespace std;
 
-
-
 int main()
 {
-	cout << "Priority queue data structure example!" << endl << endl;
+	cout << "Priority queue using link list test" << endl << endl;
 
 	const int SIZE = 7;
 	PriorityQueue<int> que(SIZE);
