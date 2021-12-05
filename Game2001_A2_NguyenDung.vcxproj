@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PriorityQueue.h" />
-    <ClInclude Include="PriorityQueueLinkedList.h" />
+    <ClInclude Include="LinkedList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PriorityQueueTest.cpp" />

@@ -67,6 +67,10 @@ public:
 		assert(m_node != nullptr);
 		m_node = m_node->m_previous;
 	}
+	int GetData()
+	{
+		return m_node->m_data;
+	}
 	int GetPriority()
 	{
 		return m_node->m_priority;
@@ -123,7 +127,7 @@ public:
 		return m_lastNode;
 	}
 	// --------------- PRIORITY QUEUE FUNCTIONS --------------------
-	void Insert_Before(LinkIterator<T>& it, T newData)
+	void Insert_Before( int p, LinkIterator<T>& it, T newData)
 	{
 		assert(it.m_node != nullptr);
 
@@ -131,6 +135,7 @@ public:
 		assert(node != nullptr);
 
 		node->m_data = newData;
+		node->m_priority = p;
 		node->m_next = it.m_node;
 		node->m_previous = it.m_node->m_previous;
 
@@ -229,13 +234,14 @@ public:
 
 		m_size = (m_size == 0 ? m_size : m_size - 1);
 	}
-	void Push_Back(T newData)
+	void Push_Back(int p, T newData)
 	{
 		// Create a standalone LinkNode object
 		LinkNode<T>* node = new LinkNode<T>;
 
 		assert(node != nullptr);
 		node->m_data = newData;
+		node->m_priority = p;
 		node->m_next = nullptr;
 		node->m_previous = nullptr;
 
